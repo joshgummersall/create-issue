@@ -1,0 +1,23 @@
+name: Create Issue
+description: Creates an issue
+
+branding:
+  icon: alert-circle
+  color: gray-dark
+
+inputs:
+  body:
+    description: The issue body, optional
+  labels:
+    description: A JSON stringified list of labels, optional
+  title:
+    description: The issue title
+    required: true
+
+outputs:
+  url:
+    description: The new issue URL
+
+runs:
+  using: node12
+  main: lib/index.js
